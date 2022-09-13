@@ -1,6 +1,6 @@
 import java.util.Map;
 
-//Map<Integer, Map<Integer, float[]>> colors = new HashMap();
+Map<Integer, Map<Integer, float[]>> colors = new HashMap();
 
 void setup() {
   size(500, 500);
@@ -8,17 +8,16 @@ void setup() {
 }
 void draw() {
   for (int i = width; i >= -20; i -= 10) {
-    //if (colors.get(i) == null) {
-    //  colors.put(i, new HashMap());
-    //}
+    if (colors.get(i) == null) {
+      colors.put(i, new HashMap());
+    }
     
     for (int j = height; j >= -20; j -= 10) {
-      //if (colors.get(i).get(j) == null) {
-        //colors.get(i).put(j, scale(i, j));
-      //} else {
-      //  scale(i, j, colors.get(i).get(j));
-      //}
-      scale(i, j, new float[]{(float) Math.random() * 256, (float) Math.random() * 256, (float) Math.random() * 256});
+      if (colors.get(i).get(j) == null) {
+        colors.get(i).put(j, scale(i, j, scale(i, j, new float[]{(float) Math.random() * 256, (float) Math.random() * 256, (float) Math.random() * 256})));
+      } else {
+        scale(i, j, colors.get(i).get(j));
+      }
     }
   }
 }
