@@ -18,7 +18,7 @@ void draw() {
       //} else {
       //  scale(i, j, colors.get(i).get(j));
       //}
-      scale(i, j);
+      scale(i, j, new float[]{(float) Math.random() * 256, (float) Math.random() * 256, (float) Math.random() * 256});
     }
   }
 }
@@ -29,7 +29,7 @@ float[] scale(int x, int y, float[] rgb) {
   return rgb;
 }
 
-float[] scale(int x, int y) {
-  float[] rgb = new float[]{(float) Math.random() * 256, (float) Math.random() * 256, (float) Math.random() * 256};
-  return scale(x, y, rgb);
-}
+//float[] scale(int x, int y) {
+//  float[] rgb = new float[]{(float) Math.random() * 256, (float) Math.random() * 256, (float) Math.random() * 256};
+//  return scale(x, y, rgb);
+//}
