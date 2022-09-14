@@ -55,8 +55,6 @@ void draw() {
     rowToChange -= 20;
     columnToChange += 20;
   }
-  
-  delay(100);
 }
 
 float[] scale(int x, int y, float[] rgb) {
