@@ -35,8 +35,6 @@ void draw() {
     }
   }
   
-  System.out.println(columnToChange);
-  
   for (int i = width; i >= -20; i -= 10) {
     if (colors.get(i) == null) {
       colors.put(i, new HashMap());
